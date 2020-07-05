@@ -2,37 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="069dba53-ba7f-4a0b-8a69-d126ca01df8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_1/7_1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_1/src/cn/HomeWork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_1/src/cn/classdemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_1/src/cn/demo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_1/src/cn/demo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_1/src/cn/demo3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_2/7_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_2/src/Hightest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_2/src/befroe_start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_2/src/demo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_2/src/lijia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_3/7_3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_3/src/cn/Computer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_3/src/cn/Displayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_3/src/cn/Keyborad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_3/src/cn/Mouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_3/src/cn/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/BiLiBiLi.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_2/ArraySame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/ArrayListDEMO1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/StringDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/StringDemo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/Zhujie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/homework.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/homework/StuManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/homework/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.assets/image-20200702083630785.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/homework/StuManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/homework/StuManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework.rar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +137,9 @@
       <workItem from="1593741562849" duration="6597000" />
       <workItem from="1593758667979" duration="4034000" />
       <workItem from="1593823937447" duration="5918000" />
-      <workItem from="1593843728341" duration="3978000" />
+      <workItem from="1593843728341" duration="5214000" />
+      <workItem from="1593858761242" duration="643000" />
+      <workItem from="1593938072924" duration="6599000" />
     </task>
     <servers />
   </component>
@@ -184,22 +158,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="560" y="109" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593507795524" />
-    <state width="1877" height="170" key="GridCell.Tab.0.bottom" timestamp="1593849707184">
+    <state width="1877" height="170" key="GridCell.Tab.0.bottom" timestamp="1593949848424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="170" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593849707184" />
-    <state width="1877" height="170" key="GridCell.Tab.0.center" timestamp="1593849707184">
+    <state width="1877" height="170" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593949848424" />
+    <state width="1877" height="170" key="GridCell.Tab.0.center" timestamp="1593949848424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="170" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593849707184" />
-    <state width="1877" height="170" key="GridCell.Tab.0.left" timestamp="1593849707184">
+    <state width="1877" height="170" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593949848424" />
+    <state width="1877" height="170" key="GridCell.Tab.0.left" timestamp="1593949848423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="170" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593849707184" />
-    <state width="1877" height="170" key="GridCell.Tab.0.right" timestamp="1593849707184">
+    <state width="1877" height="170" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593949848423" />
+    <state width="1877" height="170" key="GridCell.Tab.0.right" timestamp="1593949848424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="170" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593849707184" />
+    <state width="1877" height="170" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593949848424" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1593838259658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -240,9 +214,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593827095982" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1593573823235">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1593948764229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593573823235" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593948764229" />
   </component>
 </project>
