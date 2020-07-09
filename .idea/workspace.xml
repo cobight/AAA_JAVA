@@ -2,16 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="069dba53-ba7f-4a0b-8a69-d126ca01df8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/7_6/7_6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_6/src/Student_Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_6/src/before_class.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_6/src/cn/Student_demo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_6/src/cn/Teacher_demo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_6/src/com/Student_demo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_7/7_7.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_7/src/GetMax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_7/src/array_reverse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_7/src/bofore_class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_7/src/homework/work1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_7/src/inter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_8/7_8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_8/src/String_duibi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_8/src/cn/before_class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_8/src/cn/work1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_8/src/cn/work2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/.idea/7_9.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/7_9.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/src/before_class/test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/src/datademo1/test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/src/homework/work1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/src/homework/work2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_9/src/staticdemo1/test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_7/Static_class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_7/cout_char.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_7/static_demo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_7/static_demo2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_8/exten/Fu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_8/exten/Tools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_8/exten/Zi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_8/exten/Zi2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_9/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_9/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_9/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_9/sendmoney.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/homework/StuManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/homework/StuManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_3/homework/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/StuManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/StuManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/Stu_tools.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/Stu_tools.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/Student.class" afterDir="false" />
@@ -21,11 +48,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="AAA_JAVA" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -49,15 +80,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="F:/INtelliJ_Idea_Space" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Application.Student_demo1 (1)">
-    <configuration name="StuManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AAA7_3.homework.StuManager" />
+  <component name="RunManager" selected="Application.work2">
+    <configuration name="sendmoney" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AAA7_9.sendmoney" />
       <module name="BiLiBiLi" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="AAA7_3.homework.*" />
+          <option name="PATTERN" value="AAA7_9.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Student_demo1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Student_demo1" />
-      <module name="7_6" />
+    <configuration name="test1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datademo1.test1" />
+      <module name="7_9" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.*" />
+          <option name="PATTERN" value="datademo1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,12 +110,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Student_demo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.Student_demo1" />
-      <module name="7_6" />
+    <configuration name="test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="before_class.test1" />
+      <module name="7_9" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.*" />
+          <option name="PATTERN" value="before_class.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,12 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Teacher_demo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.Teacher_demo2" />
-      <module name="7_6" />
+    <configuration name="work1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.work1" />
+      <module name="7_9" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.*" />
+          <option name="PATTERN" value="homework.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,20 +136,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="before_class" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="before_class" />
-      <module name="7_6" />
+    <configuration name="work2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.work2" />
+      <module name="7_9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Student_demo1 (1)" />
-        <item itemvalue="Application.Teacher_demo2" />
-        <item itemvalue="Application.Student_demo1" />
-        <item itemvalue="Application.StuManager" />
-        <item itemvalue="Application.before_class" />
+        <item itemvalue="Application.work2" />
+        <item itemvalue="Application.work1 (1)" />
+        <item itemvalue="Application.test1 (1)" />
+        <item itemvalue="Application.sendmoney" />
+        <item itemvalue="Application.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +197,16 @@
       <workItem from="1593956890903" duration="3024000" />
       <workItem from="1593994882107" duration="500000" />
       <workItem from="1593995783909" duration="4955000" />
-      <workItem from="1594019867148" duration="13325000" />
+      <workItem from="1594019867148" duration="13926000" />
+      <workItem from="1594083013453" duration="7469000" />
+      <workItem from="1594103969838" duration="8372000" />
+      <workItem from="1594119161906" duration="6120000" />
+      <workItem from="1594130287686" duration="350000" />
+      <workItem from="1594167683102" duration="4415000" />
+      <workItem from="1594195347033" duration="3358000" />
+      <workItem from="1594210118898" duration="6622000" />
+      <workItem from="1594254757664" duration="6507000" />
+      <workItem from="1594275154439" duration="20806000" />
     </task>
     <servers />
   </component>
@@ -174,10 +221,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594027369270" />
-    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1594037385050">
+    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1594295067237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594037385050" />
+    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594295067237" />
+    <state x="739" y="378" width="441" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594197090464">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="378" width="441" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1594197090464" />
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593951781299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -186,42 +237,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="560" y="109" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593507795524" />
-    <state width="1877" height="170" key="GridCell.Tab.0.bottom" timestamp="1594040838000">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594282842554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="170" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594040838000" />
-    <state width="1877" height="170" key="GridCell.Tab.0.center" timestamp="1594040838000">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594282842554" />
+    <state width="1877" height="184" key="GridCell.Tab.0.bottom" timestamp="1594300976807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="170" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594040838000" />
-    <state width="1877" height="170" key="GridCell.Tab.0.left" timestamp="1594040838000">
+    <state width="1877" height="184" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594300976807" />
+    <state width="1877" height="184" key="GridCell.Tab.0.center" timestamp="1594300976807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="170" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594040838000" />
-    <state width="1877" height="170" key="GridCell.Tab.0.right" timestamp="1594040838000">
+    <state width="1877" height="184" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594300976807" />
+    <state width="1877" height="184" key="GridCell.Tab.0.left" timestamp="1594300976807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="170" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594040838000" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1593838259658">
+    <state width="1877" height="184" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594300976807" />
+    <state width="1877" height="184" key="GridCell.Tab.0.right" timestamp="1594300976807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593838259658" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1593838259658">
+    <state width="1877" height="184" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594300976807" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1594298871071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593838259658" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1593838259658">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594298871071" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1594298871071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593838259658" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1593838259658">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594298871071" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1594298871071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593838259658" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1593485217122">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594298871071" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1594298871071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593485217122" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594298871071" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1594215511472">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594215511472" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1593507788301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -230,21 +285,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="731" y="222" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593650410565" />
-    <state x="334" y="129" key="new project wizard" timestamp="1593996348737">
+    <state x="334" y="129" key="new project wizard" timestamp="1594254819990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1593996348737" />
-    <state x="661" y="147" key="refactoring.ChangeSignatureDialog" timestamp="1593824607244">
+    <state x="334" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1594254819990" />
+    <state x="661" y="147" key="refactoring.ChangeSignatureDialog" timestamp="1594295373579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="661" y="147" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593824607244" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1593996911768">
+    <state x="661" y="147" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594295373579" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1594178371389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593996911768" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594037836040">
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594178371389" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594256621656">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594037836040" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594256621656" />
   </component>
 </project>
