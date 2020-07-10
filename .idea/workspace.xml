@@ -2,46 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="069dba53-ba7f-4a0b-8a69-d126ca01df8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/7_7/7_7.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_7/src/GetMax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_7/src/array_reverse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_7/src/bofore_class.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_7/src/homework/work1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_7/src/inter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_8/7_8.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_8/src/String_duibi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_8/src/cn/before_class.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_8/src/cn/work1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_8/src/cn/work2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/.idea/7_9.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/7_9.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/src/before_class/test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/src/datademo1/test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/src/homework/work1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/src/homework/work2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_9/src/staticdemo1/test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_7/Static_class.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_7/cout_char.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_7/static_demo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_7/static_demo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_8/exten/Fu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_8/exten/Tools.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_8/exten/Zi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_8/exten/Zi2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_9/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_9/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_9/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_9/sendmoney.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_10/7_10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_10/src/homework/work1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_10/src/homework/work2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_10/interfa/abstrac/MyInterFaceAbstract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_10/interfa/abstrac/MyInterFaceAbstractImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_10/interfa/defau/MyInterFaceDefault.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_10/interfa/defau/MyInterFaceDefaultImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BiLiBiLi/src/AAA7_10/interfa/ststi/MyStaticInterFace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/StuManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/StuManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/Stu_tools.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/Stu_tools.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BiLiBiLi/AAA7_3/homework/Student.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,16 +51,34 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="F:/INtelliJ_Idea_Space" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/7_10/src/homework" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Application.work2">
-    <configuration name="sendmoney" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AAA7_9.sendmoney" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JAVA\AAA_JAVA\7_10\src\homework" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.mans">
+    <configuration name="man" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AAA7_10.interfa.man" />
       <module name="BiLiBiLi" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="AAA7_9.*" />
+          <option name="PATTERN" value="AAA7_10.interfa.abstrac.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mans" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AAA7_10.interfa.defau.mans" />
+      <module name="BiLiBiLi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AAA7_10.interfa.defau.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,19 +92,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="datademo1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="before_class.test1" />
-      <module name="7_9" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="before_class.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.mans" />
+        <item itemvalue="Application.man" />
         <item itemvalue="Application.work2" />
         <item itemvalue="Application.work1 (1)" />
         <item itemvalue="Application.test1 (1)" />
-        <item itemvalue="Application.sendmoney" />
-        <item itemvalue="Application.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -207,6 +183,7 @@
       <workItem from="1594210118898" duration="6622000" />
       <workItem from="1594254757664" duration="6507000" />
       <workItem from="1594275154439" duration="20806000" />
+      <workItem from="1594340792056" duration="10298000" />
     </task>
     <servers />
   </component>
@@ -221,10 +198,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594027369270" />
-    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1594295067237">
+    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1594348491249">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594295067237" />
+    <state x="713" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594348491249" />
     <state x="739" y="378" width="441" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594197090464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -241,22 +218,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594282842554" />
-    <state width="1877" height="184" key="GridCell.Tab.0.bottom" timestamp="1594300976807">
+    <state width="1877" height="184" key="GridCell.Tab.0.bottom" timestamp="1594374877172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="184" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594300976807" />
-    <state width="1877" height="184" key="GridCell.Tab.0.center" timestamp="1594300976807">
+    <state width="1877" height="184" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594374877172" />
+    <state width="1877" height="184" key="GridCell.Tab.0.center" timestamp="1594374877172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="184" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594300976807" />
-    <state width="1877" height="184" key="GridCell.Tab.0.left" timestamp="1594300976807">
+    <state width="1877" height="184" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594374877172" />
+    <state width="1877" height="184" key="GridCell.Tab.0.left" timestamp="1594374877172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="184" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594300976807" />
-    <state width="1877" height="184" key="GridCell.Tab.0.right" timestamp="1594300976807">
+    <state width="1877" height="184" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594374877172" />
+    <state width="1877" height="184" key="GridCell.Tab.0.right" timestamp="1594374877172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="184" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594300976807" />
+    <state width="1877" height="184" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594374877172" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1594298871071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -285,10 +262,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="731" y="222" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593650410565" />
-    <state x="334" y="129" key="new project wizard" timestamp="1594254819990">
+    <state x="334" y="129" key="new project wizard" timestamp="1594372473855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1594254819990" />
+    <state x="334" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1594372473855" />
     <state x="661" y="147" key="refactoring.ChangeSignatureDialog" timestamp="1594295373579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

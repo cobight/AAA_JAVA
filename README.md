@@ -544,3 +544,128 @@ c.setTime(date1);
  c.add(Calendar.*YEAR*, -1);
 
 c.add(Calendar.*MONTH*, 1);
+
+# 接口
+
+interface是面向对象编程语言中接口操作的关键字，功能是把所需成员组合起来，用来装封一定功能的集合。它好比一个模板，在其中定义了对象必须实现的成员，通过类或结构来实现它。接口不能直接实例化，即ICount ic=new iCount()是错的。接口不能包含成员的任何代码，只定义成员本身。接口成员的具体代码由实现接口的类提供。接口使用interface关键字进行声明。
+
+## 接口定义
+
+接口是一种约束形式，其中只包括成员定义，不包含成员实现的内容。
+
+声明格式如下：
+
+[attributes] [modifiers] interface identifier [: base-list] {interface-body} {;}
+
+## 发展
+
+### java 7
+
+```
+1、常量
+
+2、抽象方法 public abstract void method();
+```
+
+### java 8
+
+```
+3、默认方法public default void method();
+
+4、静态方法public static void method();
+```
+
+#### java 9
+
+```
+5、私有方法
+```
+
+## 定义
+
+在任何版本的java中，接口都能定义抽象方法。
+
+public abstract 返回值类型 方法名（参数列表）;
+
+```java
+public interface MyInterFaceAbstract {
+    //定义抽象方法的四种
+    public abstract void methodAbs1();//标准
+    abstract void methodAbs2();
+    public void methodAbs3();
+    void methodAbs4();
+}
+```
+
+## 使用步骤
+
+1、接口不能直接使用，必须有一个“实现类” 来实现该接口。
+
+格式：
+
+```java
+public class 实现类名称 implements 接口名称{
+    //。。。
+}
+```
+
+2、接口的实现类必须覆盖重写（实现）接口中所有的抽象方法。
+
+实现：去掉abstract关键字，加上方法体大括号。
+
+3、创建实现类的对象，进行使用。
+
+注意事项：
+
+如果该类并没有覆盖重写接口中所有的抽象方法，那么这个实现类自己就必须是抽象类。
+
+## Default
+
+### 案例
+
+```java
+interface MyInterFaceDefaul {
+    public abstract void abs();
+    public default void methodDefault(){
+        System.out.println("default");
+    }
+}
+public class MyInterFaceDefaultImpl implements MyInterFaceDefaul {
+    @Override
+    public void abs() {
+        System.out.println("abs");
+    }
+
+
+}
+class mans{
+    public static void main(String[] args) {
+        MyInterFaceDefaultImpl m = new MyInterFaceDefaultImpl();
+        m.abs();
+        m.methodDefault();
+    }
+}
+```
+
+out
+
+```
+abs
+default
+```
+
+methodDefault不在实现类，会向上找借口
+
+### 概念
+
+接口里的默认方法能直接调用，也能覆盖重写。
+
+## 接口常量
+
+public static final 数据类型 常量名 = ***；
+
+= 							数据类型 常量名 = ***;
+
+接口里的常量必须赋值。
+
+常量名全大写，下划线连接。
