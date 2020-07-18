@@ -1,6 +1,6 @@
 # AAA_JAVA
 
-、6月30
+6月30
 
 # 初识java
 
@@ -632,6 +632,8 @@ c.add(Calendar.*MONTH*, 1);
 
 # 接口
 
+**继承优先于接口**
+
 interface是面向对象编程语言中接口操作的关键字，功能是把所需成员组合起来，用来装封一定功能的集合。它好比一个模板，在其中定义了对象必须实现的成员，通过类或结构来实现它。接口不能直接实例化，即ICount ic=new iCount()是错的。接口不能包含成员的任何代码，只定义成员本身。接口成员的具体代码由实现接口的类提供。接口使用interface关键字进行声明。
 
 ## 接口定义
@@ -1261,3 +1263,354 @@ public void add(int...arr){
 ​	
 
 }
+
+# 自定义排序规则
+
+## 重写Comparable接口的compareTo方法
+
+被排序的类通过Comparable接口重写compareTo方法
+
+通过Collections集合工具进行排序或者选定接口排序方法
+
+```
+list.sort(User::compareTo);
+```
+
+```java
+public class SortImplement {
+    public static void main(String[] args) throws ParseException {
+        ArrayList<User> list = new ArrayList<>();
+        list.add(new User("老大","19980122",50));
+        list.add(new User("老二","19970122",60));
+        list.add(new User("老三","19980122",70));
+        Collections.sort(list);
+        System.out.println(list);
+    }
+}
+class User implements Comparable<User>{
+    private String name;
+    private Date birthday;
+    private int score;
+    private SimpleDateFormat sdf= new SimpleDateFormat("yyyyMMdd");
+    public User(String name, String birthday, int score) throws ParseException {
+        this.name = name;
+        this.birthday = sdf.parse(birthday);
+        this.score = score;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getBirthday() {
+        return sdf.format(birthday);
+    }
+    public void setBirthday(String birthday) throws ParseException {
+        this.birthday = sdf.parse(birthday);
+    }
+    public int getScore() {
+        return score;
+    }
+    public void setScore(int score) {
+        this.score = score;
+    }
+    public int getAge(){
+        Calendar calendar = Calendar.getInstance();
+        long now = calendar.getTimeInMillis();
+        calendar.setTime(this.birthday);
+        long birth = calendar.getTimeInMillis();
+        return (int) ((now-birth)/1000/60/60/24/365);
+    }
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", birthday=" + sdf.format(birthday) +
+                ", score=" + score +
+                ", age=" + getAge() +
+                '}';
+    }
+    @Override
+    public int compareTo(User o) {
+        return this.getAge()-o.getAge();
+    }
+}
+```
+
+### Comparable排序规则
+
+自己（this）-参数：升序
+
+参数-自己（this）：降序
+
+## 重写Comparator接口里的Compare排序方法
+
+```java
+ArrayList<User> list = new ArrayList<>();
+list.add(new User("老大","19980122",50));
+list.add(new User("老二","19970122",60));
+list.add(new User("老三","19980122",70));
+//list.sort(User::compareTo);
+Collections.sort(list, new Comparator<User>() {
+    @Override
+    public int compare(User o1, User o2) {
+        return o2.getAge()-o1.getAge();
+    }
+});
+//Collections.sort(list);
+System.out.println(list);
+```
+
+# Map
+
+<key,value>
+
+## 特点
+
+1. Map集合是一个双列集合，一个元素包含两个值（一个key，一个value）
+2. Map集合中的元素，key和value的数据类型可以相同，也可以不同
+3. Map集合中的元素，key是不允许重复的，但是value是可以重复的
+4. Map集合中的元素，key和value是一一对应
+
+
+
+## 子类：HashMap
+
+implements Map<k,v>
+
+接口是Map
+
+**key不重复，无序集合**
+
+### 特点
+
+1. HashMap集合底层是哈希表：查询速度特别的快
+
+   ​	JDK1.8之前：数组+单向链表
+
+   ​	JDK1.8之后：数组+单向链表/红黑树（链表的长度超过8）：提高查询的速度
+
+2. hashmap集合是一个无序的集合，存储元素和取出元素的顺序有可能不一致
+
+   
+
+### 案例
+
+```java
+Map<Integer,String> map = new HashMap<>();
+map.put(1,"qwe");
+map.put(2,"asd");
+map.put(3,"rty");
+map.put(4,"fgh");
+map.put(5,"uio");
+map.put(6,"jkl");
+Set<Integer> sets = map.keySet();
+Iterator<Integer> iterator = sets.iterator();
+while (iterator.hasNext()){
+    Integer next=iterator.next();
+    System.out.println(next +" : "+ map.get(next));
+}
+```
+
+### 存储自定义类型键值
+
+自定义类型作为key，重写hashcode，equals方法
+
+
+
+## 子类：LinkedHashMap
+
+**key不重复有序集合**输入跟输出顺序一样
+
+### 特点
+
+1. LinkedHashMap集合底层是哈希表+链表（保证迭代的顺序）
+2. LinkedHashMap集合是一个有序的集合，存储元素和取出元素的顺序是一致的
+
+
+
+## 内部接口Entry
+
+
+
+# Hashtable
+
+**Hashtable和Vector集合一样，在jdk1.2后被HashMap,ArrayList取代了，Hashtable的子类Properties依然活跃**
+
+Properties集合是一个唯一和IO流相结合的集合
+
+Hashtable:底层也是一个哈希表，是一个线程安全的集合，是单线程集合，速度慢
+
+HashMap:底层是一个哈希表，是一个线程不安全的集合，是多线程的集合，速度快
+
+
+
+HashMap集合：可以存储null键，null值
+
+Hashtable集合：不能存储null值，null键
+
+
+
+# List
+
+JDK9的新特性：//暂时没法写
+
+​		List接口，Set接口，Map
+
+
+
+# 异常
+
+## Exception：编译期异常
+
+把异常处理掉，程序可以继续执行
+
+若知道将要出现的错误，可以写错误名Exception，不知道的直接写Exception
+
+```java
+SimpleDateFormat sdf = new SimpleDateFormat（“yyyy-MM-dd”）;
+Date date = null;
+try{
+    date = sdf.parse("1999-09-09");//yes
+    date = sdf.parse("1999-0909");//no，exception
+}catch (ParseException e){//Exception e
+    e.printStackTrack();
+}
+```
+
+
+
+## RuntimeException运行期异常
+
+修改源代码，程序才能继续执行。
+
+
+
+## throw抛异常
+
+
+
+#### index不在范围
+
+throw new ArrayIndexOutOfNoundsException("下标异常 ")
+
+#### obj=null
+
+throw new NullPointerException("传递的对象的值是null")； 
+
+或者用Objects的静态方法
+
+Objects.requireNonNULL(obj,"传递的对象是null")；
+
+
+
+## 自定义抛异常
+
+
+
+在方法声明时使用
+
+```
+修饰符 返回值类型 方法名（参数列表） throws  AAAException,BBBException...{
+
+	throw new AAAException("产生原因");
+
+	throw new BBBException("产生原因");
+
+}
+```
+
+注意：
+
+1. throws关键字必须写在方法声明处
+
+2. throws关键字后边声明的异常必须是Exception或者是Exception的子类
+
+3. 方法内部如果抛出了多个异常，那么throws后边必须也声明多个异常
+
+   ​	如果抛出的多个异常对象有子父类关系，那么直接声明父类异常即可
+
+4. 调用了一个声明抛出异常的方法，我们就必须的处理声明的异常
+
+   ​	要么继续使用throws声明抛出，交给方法的调用者处理，最终交给JVM
+
+   ​	要么try...catch自己处理异常
+
+## 自定义处理异常
+
+try...catch：自己处理异常
+
+格式：
+
+```java
+try{
+    可能产生异常的代码
+}catch （定义一个异常的变量，用来接收try中抛出的异常对象）{
+    异常的处理逻辑，接收异常对象之后，怎么处理异常对象
+    一般在工作中，会把异常的信息记录到一个日志中
+}
+...
+catch（异常类名 变量名）{
+
+}
+```
+
+注意：
+
+1. try中可能会抛出多个异常对象，那么就可以使用多个catch来处理这些异常对象
+2. 如果try中没有产生异常，那么就不会执行catch中异常的处理逻辑，执行完try中的代码继续执行try...catch之后的代码
+
+
+
+## Throwable
+
+Throwable类中定义了3个异常处理的方法
+
+​	String getMessage（）	返回此 throwable 的简短描述。
+
+​	String toString（）	返回此  throwable 的详细消息字符串。
+
+​	void printStackTrace（）  JVM打印异常对象，默认此方法，打印的异常信息是最全面的。
+
+ 
+
+## finally
+
+finally中有return语句，就一定会用finally中的return
+
+不管try中还是catch中有return   ，最终会执行finally的return
+
+## 子父类异常
+
+父类的方法声明抛出什么异常，子类继承后也要声明抛出什么异常
+
+父类的方法没有声明抛出异常，子类继承后也不能声明抛出异常
+
+​		除非方法体中try...catch抓异常
+
+## 自定义异常类
+
+
+
+```java
+public class xxxException extends Exception | RuntimeException{
+    添加一个空参的构造方法
+    添加一个带异常信息的构造方法
+}
+```
+
+注意：
+
+1. 自定义异常类一般都是以Exception结尾，说明该类是一个异常类
+
+2. 自定义异常类，必须继承Exception或者RuntimeException
+
+   ​		继承Exception：那么自定义的异常类就是一个编译期异常，如果方法内部抛出编译期异常，就必须处理这个异常，要么throws，要么try...catch
+
+   ​		继承RuntimeException：那么自定义的异常类就是一个运行期异常，无需处理，交给虚拟机处理（中断处理）
+
+
+
+
+
