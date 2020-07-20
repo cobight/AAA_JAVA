@@ -1,0 +1,87 @@
+1、异常的分类
+                   ①检查性异常(编译时异常)
+                            reg:IO异常
+                   ②非检查性异常(运行时异常)
+                            reg:
+                                    NullPointerException//空指针异常
+                                    ArrayIndexOutOfBoundsException//数组索引越界异常
+                                    StringIndexOutOfBOundsException//字符串索引超出范围，越界
+                                    ClassCastException  //类造型异常
+                                    NumberFormatException//数字异常
+                                    IllegalArgumentsException//非法参数异常
+                 不要把ClassNotFoundException当成运行时异常
+           在throw运行时异常对象时，方法处不需要声明throws，因为编译器 会忽略运行时异常。
+           当throw编译时异常时，必须在方法处声明throws此对象的类型。
+2、为什么使用异常机制
+	防止程序中断
+3、什么是编译时异常
+	代码无法编译，代码爆红线，连编译成class文件都不中的
+4、什么是运行时异常
+	 NullPointerException//空指针异常
+                 ArrayIndexOutOfBoundsException//数组索引越界异常
+                 StringIndexOutOfBOundsException//字符串索引超出范围，越界
+                 ClassCastException  //类造型异常
+                  NumberFormatException//数字异常
+                  IllegalArgumentsException//非法参数异常
+	InputFormatException //（scanner）输入异常
+	IOException //IO流异常
+
+5、什么是检查型异常
+	写代码时爆红线，编译时异常
+6、什么是非检察型异常
+	执行时程序因异常而中断，运行时异常
+7、throw的作用
+	手动代码发送异常信息
+	throw new Exception（"msg"）;
+8、throws的作用
+	方法定义时抛给调用者异常的写法
+9、throw和throws的区别
+	前者方法体抛，后者方法定义抛
+10、try catch finally的几种组合
+try{
+
+}catch(NullPointerException e){
+
+}catch(IOException  e){
+
+}finally{
+
+}
+11、日志使用的步骤
+	准备支持文件log4j-1.2.17.jar
+	准备配置文件log4j.properties
+	导入jar包
+
+	自动加载配置文件：
+
+（1）如果采用log4j输出日志，要对log4j加载配置文件的过程有所了解。log4j启动时，默认会寻找source folder下的log4j.xml配置文件，若没有，会寻找log4j.properties文件。然后加载配置。配置文件放置位置正确，不用在程序中手动加载log4j配置文件。如果将配置文件放到了config文件夹下，在build Path中设置下就好了。
+
+	若要手动加载配置文件如下：（1）PropertyConfigurator.configure("log4j.properties") 默认读取的是项目根目录的路径。此时的log4j.properties要放在项目目录下。
+
+12、%d %m %M %F %l %n的作用分别是什么
+格式化符号说明：
+%p：输出日志信息的优先级，即DEBUG，INFO，WARN，ERROR，FATAL。
+%d：输出日志时间点的日期或时间，默认格式为ISO8601，也可以在其后指定格式，如：%d{yyyy/MM/dd HH:mm:ss,SSS}。
+%r：输出自应用程序启动到输出该log信息耗费的毫秒数。
+%t：输出产生该日志事件的线程名。
+%l：输出日志事件的发生位置，相当于%c.%M(%F:%L)的组合，包括类全名、方法、文件名以及在代码中的行数。例如：test.TestLog4j.main(TestLog4j.java:10)。
+%c：输出日志信息所属的类目，通常就是所在类的全名。
+%M：输出产生日志信息的方法名。
+%F：输出日志消息产生时所在的文件名称。
+%L:：输出代码中的行号。
+%m:：输出代码中指定的具体日志信息。
+%n：输出一个回车换行符，Windows平台为"rn"，Unix平台为"n"。
+%x：输出和当前线程相关联的NDC(嵌套诊断环境)，尤其用到像java servlets这样的多客户多线程的应用中。
+%%：输出一个"%"字符。
+另外，还可以在%与格式字符之间加上修饰符来控制其最小长度、最大长度、和文本的对齐方式。如：
+1) c：指定输出category的名称，最小的长度是20，如果category的名称长度小于20的话，默认的情况下右对齐。
+2)%-20c："-"号表示左对齐。
+3)%.30c：指定输出category的名称，最大的长度是30，如果category的名称长度大于30的话，就会将左边多出的字符截掉，但小于30的话也不会补空格。
+集合预习
+
+
+
+
+
+
+
