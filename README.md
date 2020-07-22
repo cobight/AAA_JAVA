@@ -403,6 +403,12 @@ Math.round()四舍五入
 
 当需要在子类中调用父类的被重写方法时，要使用 super 关键字。
 
+## equals
+
+重写前比对的是 ` 地址`
+
+
+
 ## (Overload)
 
 重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。
@@ -1373,6 +1379,12 @@ System.out.println(list);
 3. Map集合中的元素，key是不允许重复的，但是value是可以重复的
 4. Map集合中的元素，key和value是一一对应
 
+| 返回值          | 返回方法                                                 | 重复否？   |
+| --------------- | -------------------------------------------------------- | ---------- |
+| `Set<K>`        | `keySet()`  返回一个 `Set`的关键视图包含在这个Map。      | 一定不重复 |
+| `Collection<V>` | `values()`  返回一个 `Collection`视图的值包含在这个Map。 | 可能会重复 |
+
+
 
 
 ## 子类：HashMap
@@ -1433,6 +1445,8 @@ while (iterator.hasNext()){
 ## 内部接口Entry
 
 
+
+## Collection
 
 # Hashtable
 

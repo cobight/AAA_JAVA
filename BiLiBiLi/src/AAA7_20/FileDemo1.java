@@ -15,8 +15,7 @@ public class FileDemo1 {
     }
     public static void printFileName(File src,int deep){
         System.out.println(src.getName()+"------"+deep);
-        if (src==null||!src.exists()){
-            return;
+        if (!src.exists()){
         }else if (src.isDirectory()){
             for (File s:src.listFiles()){
                 printFileName(s,deep+1);
