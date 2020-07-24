@@ -5,9 +5,9 @@ import java.util.Objects;
 
 public class FileDemo1 {
     public static void main(String[] args) {
-        File file = new File("download");
-        System.out.println(file.getAbsoluteFile());
-//        printName(file,2);
+        File file = new File("F:\\JAVA\\AAA_JAVA");
+//        System.out.println(file.getAbsoluteFile());
+        printName(file,1);
     }
     public static void printName(File src,int deep){
         if (deep>0){

@@ -1444,11 +1444,17 @@ while (iterator.hasNext()){
 
 ## 内部接口Entry
 
+Set< Map.Entry<K,V> > entrySet()
+
+把Map集合内部的多个Entry对象取出来存储到一个Set集合中
+
+Entry对象方法：getKey()  getValue()
 
 
-## Collection
 
-# Hashtable
+
+
+## Hashtable
 
 **Hashtable和Vector集合一样，在jdk1.2后被HashMap,ArrayList取代了，Hashtable的子类Properties依然活跃**
 
@@ -1464,13 +1470,216 @@ HashMap集合：可以存储null键，null值
 
 Hashtable集合：不能存储null值，null键
 
+## Collection
 
+Collection存放的数据特征是：无序  无下标  可重复；
 
 # List
 
-JDK9的新特性：//暂时没法写
+存储数据的特征：有序，有下标，可以重复
 
-​		List接口，Set接口，Map
+void add(int index,Object element)	在列表的index位置添加元素
+Object remove(int index)	删除列表中index位置的元素
+Object get(int index)	返回列表index位置的元素
+Object set(int index,Object element)	用指定元素替换列表中指定位置的元素
+int indexOf(Object o)	返回列表中首次出现指定元素的索引，如果列表中不包含此元素，则返回-1
+int lastIndexOf(Object o)	返回列表中最后出现指定元素的索引，如果列表中不包含此元素，则返回-1
+List接口的实现类主要有ArrayList、Stack、Vector和LinkedList。
+
+## 1、arrayList 
+
+概述：动态数组
+
+ArrayList类以数组为数据结构实现了List接口，用于表述长度可变的数组列表。在ArrayList中使用对象数组保存数据，调用new ArrayList()后，它会默认初始化一个size=10的数组。每次add操作都要检查数组容量，如果不够，重新设置一个初始容量为1.5倍大小的新数组，然后再把每个元素复制过去。在数组中间插入或删除，都要移动后面的所有元素。
+
+优势：根据下标查找数据速度快，遍历速度快；
+
+弊端：插入和删除效率低，插入式往后移动，删除往前移动；
+
+## 2、LinkedList
+
+LinkedList实现的是一个双向链表。每个节点除含有元素外，还包含向前、向后的指针。在链表结构中，每个元素都拥有两个指针属性，一个是指向上一个元素的previous指针，一个是指向下一个元素的next指针，第一个元素的previous指针指向“空”，最后一个元素的next指针指向“空”。增加结点，只会对链表的指针进行操作，速度快。LinkedList有双向队列的特征，在链表两端可增删数据。使用index查找对象时，会以index和size/2比较，从前或从后向中间搜索。
+
+比较ArrayList和LinkedList的结构，可以得到以下结论。
+
+ArrayList的remove和add(index,Object)操作代价高，需要移动后面的每个元素。
+
+LinkedList采用链表数据结构实现，便于元素的插入和删除，它的get(index)操作代价高，要先循环遍历list找到Object；
+
+
+
+首尾添加，首尾删除全部都是LInkedList独有的方法；
+
+## 3、方法
+
+```java
+package day21;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class DogTest {
+    static List dogs = new ArrayList();
+
+    public static void main(String[] args) {
+        Dog d1 = new Dog("h",3,10.5f);
+        dogs.add(d1);
+        dogs.add(10);
+        dogs.add(new  String("hi"));
+        dogs.add(new int[]{50,60,70});
+        Dog dd = (Dog)dogs.get(0);
+//        Integer n = 10;
+//        dogs.remove(n);//remove想删除基本数据类型的话则必须删除对应的包装对象；
+        //修改
+        dogs.set(2,new String[]{"h","e","l"});
+        for (int i = 0; i < dogs.size(); i++) {
+            //获取对象
+            Object o = dogs.get(i);//通过下标获取对象
+            //然后判断对象的类型
+           if(o instanceof int[]){
+               int[] ns = (int[])o;
+               System.out.println(Arrays.toString(ns));
+           }else if(o instanceof  String[]){
+               String[] ns = (String[])o;
+               System.out.println(Arrays.toString(ns));
+           }else{
+               System.out.println(o);
+           }
+        }
+
+
+    }
+}
+
+```
+
+
+
+# Set
+
+set存储数据的特征：无序 无下标 不可重复；最大的作用：去重；
+
+
+
+1、概述
+
+set是表示唯一对象的集合。无下标 无顺序 不可重复；
+
+2、遍历
+
+迭代器遍历
+
+3.原理
+
+先判断哈希码值是否相等，相等的话再调用equals方法，如果相等则覆盖，不相等则放进去；
+
+如果哈希码值不相等的话则直接放进去；
+
+4.HashSet
+
+无序 无下标不可重复
+
+5、TreeSet--》自然排序
+
+八种基本数据类型对应的包装类都实现了Comparable接口，实现了自然排序；
+
+String类型也实现了Comparable，也可以自然排序；
+
+有序 无下标  不可重复
+
+如果一个类实现了Comparable接口就可以实现自然排序；
+
+疑问：谁放到treeset里面都会排序吗？
+不是的，只有该类实现了Comparable接口，才可以放到treeset里面排序；
+
+treeset里面只可以放实现了Comparable接口的类的对象；
+
+6、LinkedHashSet
+
+有序（按照添加的时候的先后顺序，不下标，不可重复）
+
+```
+package com.aaa.day22;
+
+import java.util.*;
+
+public class SetTest {
+    public static void main(String[] args) {
+        test5();
+    }
+    public  static  void test1(){
+        Set set = new HashSet();
+        set.add(5);
+        set.add("banana");
+        set.add(5);
+        set.add("apple");
+        set.add(7);
+        set.add("hello");
+        set.add(9);
+        System.out.println(set);
+    }
+    public  static  void test2(){
+        Set set = new LinkedHashSet();
+        set.add(5);
+        set.add("banana");
+        set.add(5);
+        set.add("apple");
+        set.add(7);
+        set.add("hello");
+        set.add(9);
+        System.out.println(set);
+    }
+    public static void test3(){
+        Set set = new TreeSet();
+        set.add(5);
+
+
+        set.add(5);
+
+        set.add(7);
+
+        set.add(9);
+        set.add(100);
+        System.out.println(set);
+    }
+
+    public static void test4(){
+        Set set = new HashSet();
+        set.add(5);
+        set.add(100);
+        set.add(5);
+        set.add(1900);
+        set.add(7);
+
+        set.add(9);
+
+
+        System.out.println(set);
+    }
+
+    public static void test5(){
+
+        Set set = new TreeSet();
+
+
+        set.add(new Student(3,"c",new Date(),1));
+        set.add(new Student(2,"b",new Date(),0));
+        set.add(new Student(1,"a",new Date(),1));
+        set.add(new Student(5,"t",new Date(),0));
+        set.add(new Student(4,"h",new Date(),1));
+        //如何使用迭代器
+       Iterator it =  set.iterator();//获取迭代器
+        while(it.hasNext()){
+             Object o =    it.next();
+             Student s = (Student) o;
+            System.out.println(s);
+        }
+
+    }
+}
+
+```
 
 
 
