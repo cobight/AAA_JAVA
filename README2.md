@@ -723,11 +723,131 @@ public static void main(String[] args) {
 
 
 
+## 文件分割与合并
+
+### split
+
+```java
+public static void main(String[] args) throws IOException {
+    File src = new File("test.jpg");
+    long len = src.length();
+    int blockSize = 1024*10;
+    int splitNum = (int)Math.ceil(len*1.0/blockSize);
+
+    int beginPos=0;
+    int actualSize=(int)(blockSize>len?len:blockSize);
+    for (int i = 0; i < splitNum; i++) {
+        beginPos=i*blockSize;
+        if (i==splitNum-1){
+            actualSize=(int)len;
+        }else {
+            actualSize=blockSize;
+            len-=actualSize;
+        }
+        System.out.println(i+"-->"+beginPos+"-->"+actualSize);
+        split(i,beginPos,actualSize);
+    }
+    System.out.println(splitNum);
+}
+public static void split(int i,long beginPos,long actualSize) throws IOException {
+    //        System.out.println(beginPos+":"+actualSize);
+    FileOutputStream fos = new FileOutputStream(new File("download/split/"+i+"tes.jpg"));
+    RandomAccessFile raf = new RandomAccessFile(new File("test.jpg"),"r");
+    raf.seek(beginPos);
+    byte[] flush = new byte[1024];
+    int len;
+    while ((len=raf.read(flush))!=-1){
+        if (actualSize>len){
+            fos.write(flush,0,len);
+            actualSize-=len;
+        }else{
+            fos.write(flush,0,(int)actualSize);
+            break;
+        }
+    }
+    raf.close();
+    fos.close();
+}
+```
 
 
 
+### merge
+
+#### 手动合并
+
+```java
+public static void main(String[] args) {
+    String PATH = System.getProperty("user.dir")+"\\download\\split";
+    File directory = new File(PATH);
+    ArrayList<File> list = new ArrayList<>(Arrays.asList(Objects.requireNonNull(directory.listFiles())));
+    list.sort(new Comparator<File>() {
+        @Override
+        public int compare(File o1, File o2) {
+            int ind1 = Integer.parseInt(o1.getName().substring(0,o1.getName().length()-7));
+            int ind2 = Integer.parseInt(o2.getName().substring(0,o2.getName().length()-7));
+            return ind1-ind2;
+        }
+    });
+    //        for (int i = 0; i < list.size(); i++) {
+    //            System.out.println(list.get(i).getName());
+    //        }
+    String outputPATH="download\\test.jpg";
+    try {
+        OutputStream os = new FileOutputStream(outputPATH);
+        for (int i = 0; i < list.size(); i++) {
+            InputStream is = new FileInputStream("download\\split\\"+i+"tes.jpg");
+            byte[] temp = new byte[1024];
+            int len;
+            while ((len=is.read(temp))!=-1){
+                os.write(temp,0,len);
+                os.flush();
+            }
+            is.close();
+        }
+        os.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+```
 
 
+
+#### 序列合并
+
+sequence
+
+```java
+public static void main(String[] args) throws Exception {
+    String PATH = System.getProperty("user.dir")+"\\download\\split";
+    File directory = new File(PATH);
+    ArrayList<File> list = new ArrayList<>(Arrays.asList(Objects.requireNonNull(directory.listFiles())));
+    list.sort(new Comparator<File>() {
+        @Override
+        public int compare(File o1, File o2) {
+            int ind1 = Integer.parseInt(o1.getName().substring(0,o1.getName().length()-7));
+            int ind2 = Integer.parseInt(o2.getName().substring(0,o2.getName().length()-7));
+            return ind1-ind2;
+        }
+    });
+    OutputStream os = new BufferedOutputStream(new FileOutputStream("download/test.jpg"));
+    Vector<InputStream> vi = new Vector<>();
+    SequenceInputStream sis =null;
+    for (int i = 0; i < list.size(); i++) {
+        vi.add(new BufferedInputStream(new FileInputStream(list.get(i))));
+    }
+    sis = new SequenceInputStream(vi.elements());
+    byte[] temp=new byte[1024];
+    int len;
+    while ((len =sis.read(temp))!=-1){
+        os.write(temp,0,len);
+    }
+    os.flush();
+    sis.close();
+    os.close();
+}
+```
 
 
 
