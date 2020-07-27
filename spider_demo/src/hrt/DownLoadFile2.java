@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.URL;
 import java.net.URLConnection;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,41 +16,33 @@ import java.util.concurrent.TimeUnit;
 public class DownLoadFile2 {
     public static void main(String[] args) throws Exception {
         Tool tool = new Tool();
-        tool.getHtml();
-        tool.getUl();
-        tool.getLi();
-        tool.showLi();
-//li_data{m3u8='https://play.093ch.com/20200726/100/1001/1001.mp4.m3u8',
-// name='[中文字幕]想說終於轉正職的我、居然與性騷擾女上司二人獨處！.GS-329'}
-
-//        Tool_m3u8 t = new Tool_m3u8();
-////        t.load_m3u8("https://play.093ch.com/20200725/88/881/881.mp4.m3u8","");
-//        t.load_m3u8("https://play.093ch.com/20200726/100/1001/1001.mp4.m3u8","202007261001");
-//        t.merge_ts("download/202007261001");
-
-
+        tool.getHtml();//获取网页的html文档
+        tool.getUl();//解析html文档，获取对应的ul标签列表
+        tool.getLi();//解析ul列表里的ul数据，获取li标签里的数据（保存类型为li_data）
+        tool.showLi();//展示所有数据
         ArrayList<li_data> list = tool.li_list;
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i).m3u8);
-            File f = new File("download\\"+list.get(i).date+""+list.get(i).id);
+        for (hrt.li_data li_data : list) {
+            System.out.println(li_data.m3u8);
+            File f = new File("download\\" + li_data.date + "" + li_data.id);
             if (!f.exists()) {
-                f.mkdirs();
+                System.out.println(f.mkdirs()?"成功生成目录！":"文件夹创建失败！");
+                //第i个数据，创建对应的文件夹，后续下载的视频切片都保存在此
             }
-            TimeUnit.MILLISECONDS.sleep(1000);//毫秒
-            Tool_m3u8 t = new Tool_m3u8();
-            t.load_m3u8(list.get(i).m3u8,list.get(i).date+""+list.get(i).id);
+//            TimeUnit.MILLISECONDS.sleep(1000);//当前线程休息1000毫秒
+            Tool_m3u8 t = new Tool_m3u8();//m3u8视频格式的下载工具类
+            t.load_m3u8(li_data.m3u8, li_data.date + "" + li_data.id);
         }
     }
 }
 class Tool{
-    private final String URL="https://www.547ch.com/";
     private String index_page = null;
     private ArrayList<String> ul_list = new ArrayList<>();
     public ArrayList<li_data> li_list = new ArrayList<>();
     public void getHtml() {
         try {
             StringBuilder html = new StringBuilder();
-            java.net.URL url = new java.net.URL(this.URL); //根据 String 表示形式创建 URL 对象。
+            String URL = "https://www.547ch.com/";
+            java.net.URL url = new java.net.URL(URL); //根据 String 表示形式创建 URL 对象。
             java.net.HttpURLConnection conn = (java.net.HttpURLConnection) url.openConnection();// 返回一个dao URLConnection 对象，它表示到 URL 所引用的远程对象的连接。
             conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.25 Safari/537.36 Core/1.70.3756.400 QQBrowser/10.5.4039.400");
             java.io.InputStreamReader isr = new java.io.InputStreamReader(conn.getInputStream());//返回从此打开的连接读取的输入流。
@@ -64,12 +55,10 @@ class Tool{
             }
             br.close(); //关闭
             isr.close(); //关闭
-            this.index_page = html.toString();
-            System.out.println("index.html");
-//            return html.toString(); //返回此序列中数据的字符串表示形式。
+            this.index_page = html.toString();//数据保存成员变量里
+            System.out.println(URL+"\t加载完毕");
         } catch (Exception e) {
             e.printStackTrace();
-//            return null;
         }
     }
     public void getUl(){
@@ -100,42 +89,25 @@ class Tool{
         ul_list.add(index_page.substring(left,right));
 
     }
-    private void downloadNet(String fullUrlPath, String fileOutPath) throws Exception {
-
-        //int bytesum = 0;
-        int byteread = 0;
-
-        URL url = new URL(fullUrlPath);
-        URLConnection conn = url.openConnection();
-        InputStream inStream = conn.getInputStream();
-        FileOutputStream fs = new FileOutputStream(fileOutPath);
-
-        byte[] buffer = new byte[1204];
-        while ((byteread = inStream.read(buffer)) != -1) {
-            //bytesum += byteread;
-            fs.write(buffer, 0, byteread);
-        }
-    }
-
     public void getLi(){
-        for (int i = 0; i < ul_list.size(); i++) {
-            String str = ul_list.get(i);//https://pho.038vg.com/Uploads/vod/2020-07-25/1002.mp4.gif.jpg
-            int left=0,right=0;
+        //https://pho.038vg.com/Uploads/vod/2020-07-25/1002.mp4.gif.jpg
+        for (String str : ul_list) {
+            int left = 0, right = 0;
             for (int i1 = 0; i1 < 6; i1++) {
-                left = str.indexOf("https://pho.038vg.com/Uploads/vod/",right)+34;
-                right = str.indexOf(".mp4.gif.jpg",left);
+                left = str.indexOf("https://pho.038vg.com/Uploads/vod/", right) + 34;
+                right = str.indexOf(".mp4.gif.jpg", left);
 //                System.out.println(str.substring(left,right));
-                String[] msg = str.substring(left,right).split("/");
-                left = str.indexOf("target=\"_blank\">",right)+16;
-                right = str.indexOf("</a></h3>",left);
-                String name = (str.substring(left,right));
-                li_list.add(new li_data("https://play.093ch.com/"+msg[0].replace("-","")+"/"+msg[1].substring(0,msg[1].length()-1)+"/"+msg[1]+"/"+msg[1]+".mp4.m3u8",name,msg[0].replace("-",""),msg[1]));
+                String[] msg = str.substring(left, right).split("/");
+                left = str.indexOf("target=\"_blank\">", right) + 16;
+                right = str.indexOf("</a></h3>", left);
+                String name = (str.substring(left, right));
+                li_list.add(new li_data("https://play.093ch.com/" + msg[0].replace("-", "") + "/" + msg[1].substring(0, msg[1].length() - 1) + "/" + msg[1] + "/" + msg[1] + ".mp4.m3u8", name, msg[0].replace("-", ""), msg[1]));
             }
         }
     }
     public void showLi(){
-        for (int i = 0; i < li_list.size(); i++) {
-            System.out.println(li_list.get(i));
+        for (hrt.li_data li_data : li_list) {
+            System.out.println(li_data);
         }
     }
 }
@@ -163,10 +135,11 @@ class li_data{
 class Tool_m3u8{
     public void load_m3u8(String url,String file) throws Exception {
         String m = HttpRequest.sendGet(url,"");
-        System.out.println(m);
+//        System.out.println(m);//获取m3u8切片数据
         String uri = url.substring(0,url.lastIndexOf("/")+1);
         ArrayList<String> list = getM3u8_ItemList(m,uri);
-        ArrayList<DownloadThread> threadlist = new ArrayList<>();
+//        System.out.println(list.size());获取切片视频的数量，后续合并切片文件到视频
+        ArrayList<DownloadThread> threadlist = new ArrayList<>();//存放new的下载线程
         for (int i = 0; i < list.size(); i++) {
 //            System.out.println(list.get(i));
             DownloadThread dt = new DownloadThread(list.get(i),"download/"+file+"/file.mp4"+i+".ts");
@@ -176,33 +149,33 @@ class Tool_m3u8{
                 TimeUnit.MILLISECONDS.sleep(3000);//毫秒
             }
         }
-        for (int i = 0; i < threadlist.size(); i++) {
-            threadlist.get(i).join();
+        for (DownloadThread downloadThread : threadlist) {
+            downloadThread.join();//用了join，主线程就得等我执行完
         }
-        merge_ts("download/"+file);
+        merge_ts("download/"+file);//切片视频下载完，开始合并视频
 
 
 
-//        System.out.println(m);copy /b  F:\JAVA\AAA_JAVA\download\202007261001\file.mp4*.ts  F:\JAVA\AAA_JAVA\download\202007261001\test1.ts
+//        System.out.println(m);
+        //cmd控制台的合并文件语句
+//        copy /b  F:\JAVA\AAA_JAVA\download\202007261001\file.mp4*.ts  F:\JAVA\AAA_JAVA\download\202007261001\test.mp4
 
     }
     public ArrayList<String> getM3u8_ItemList(String info,String uri){
-        String[] arr = info.split("\n");
+        String[] arr = info.split("\n");//分割m3u8里的字符串数据
         ArrayList<String> list = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].contains(".ts")){
-                list.add(uri+arr[i]);
+        for (String s : arr) {
+            if (s.contains(".ts")) {//找ts结尾的
+                list.add(uri + s);
             }
         }
         return list;
     }
     public void merge_ts(String PATH){
-//        String PATH = System.getProperty("user.dir")+"\\download\\split";//项目根目录
         File directory = new File(PATH);
+        //获取所有当前文件下的所有切片数据.ts文件
         ArrayList<File> list = new ArrayList<>(Arrays.asList(Objects.requireNonNull(directory.listFiles())));
-//        System.out.println(list.get(0).getName());
-//        System.out.println("-->"+list.get(0).getName().substring(8, list.get(0).getName().length() - 3));
-
+        //排序
         list.sort(new Comparator<File>() {
             @Override
             public int compare(File o1, File o2) {
@@ -212,14 +185,15 @@ class Tool_m3u8{
                 return ind1-ind2;
             }
         });
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i).getName());
-        }
+        //查看排序后的列表
+//        for (int i = 0; i < list.size(); i++) {
+//            System.out.println(list.get(i).getName());
+//        }
         String outputPATH=PATH+"\\file.mp4";
         try {
             OutputStream os = new FileOutputStream(outputPATH);
             for (int i = 0; i < list.size(); i++) {
-                InputStream is = new FileInputStream(PATH+"\\file.mp4"+i+".ts");
+                InputStream is = new FileInputStream(PATH+"\\file.mp4"+i+".ts");//我记得想用list.get(i)来着
                 byte[] temp = new byte[1024];
                 int len;
                 while ((len=is.read(temp))!=-1){
@@ -237,7 +211,7 @@ class Tool_m3u8{
 }
 class HttpRequest {
     /**
-     * 向指定URL发送GET方法的请求
+     * 向指定URL发送GET方法的请求，返回字符串
      *
      * @param url
      *            发送请求的URL
@@ -302,7 +276,7 @@ class HttpRequest {
     public static String sendPost(String url, String param) {
         PrintWriter out = null;
         BufferedReader in = null;
-        String result = "";
+        StringBuilder result = new StringBuilder();
         try {
             URL realUrl = new URL(url);
             // 打开和URL之间的连接
@@ -326,7 +300,7 @@ class HttpRequest {
                     new InputStreamReader(conn.getInputStream()));
             String line;
             while ((line = in.readLine()) != null) {
-                result += line;
+                result.append(line);
             }
         } catch (Exception e) {
             System.out.println("发送 POST 请求出现异常！"+e);
@@ -346,32 +320,20 @@ class HttpRequest {
                 ex.printStackTrace();
             }
         }
-        return result;
+        return result.toString();
     }
 
     /**
-     * 字节下载
-     * try(InputStream is = new BufferedInputStream(new FileInputStream(new File(path)));ByteArrayOutputStream baos = new ByteArrayOutputStream();) {
-     *             byte[] temp = new byte[1024*10];
-     *             int len;
-     *             while ((len=is.read(temp))!=-1){
-     *                 baos.write(temp,0,len);
-     *             }
-     *             baos.flush();
-     *             return baos.toByteArray();
-     *         } catch (IOException e) {
-     *             e.printStackTrace();
-     *             return null;
-     *         }
+     * 文件下载与保存
      */
-    public static boolean download_file(String url,String filepath) {
+    public static void download_file(String url, String filepath) {
         InputStream is = null;
         FileOutputStream fos = null;
         try {
             URL realUrl = new URL(url);
             // 打开和URL之间的连接
             URLConnection connection = realUrl.openConnection();
-            // 设置通用的请求属性
+            // 设置通用的请求属性头
             connection.setRequestProperty("accept", "*/*");
             connection.setRequestProperty("connection", "Keep-Alive");
             connection.setRequestProperty("user-agent",
@@ -394,12 +356,10 @@ class HttpRequest {
                 fos.write(temp,0,len);
             }
 
-            return true;
         } catch (Exception e) {
-            System.out.println("ts切片下载出现异常！" + url);
-//            e.printStackTrace();
+            System.out.println("ts切片下载出现异常！开始重新下载：" + url);
+//            e.printStackTrace();异常重载
             download_file(url, filepath);
-            return false;
         }finally {
             try{
                 if (is!=null){
@@ -411,41 +371,20 @@ class HttpRequest {
             }catch (Exception e){
                 e.printStackTrace();
             }
-
-
         }
         // 使用finally块来关闭输入流
 
 
     }
-    private void downloadNet(String fullUrlPath, String fileOutPath) throws Exception {
 
-        //int bytesum = 0;
-        int byteread = 0;
-
-        URL url = new URL(fullUrlPath);
-        URLConnection conn = url.openConnection();
-        InputStream inStream = conn.getInputStream();
-        FileOutputStream fs = new FileOutputStream(fileOutPath);
-
-        byte[] buffer = new byte[1204];
-        while ((byteread = inStream.read(buffer)) != -1) {
-            //bytesum += byteread;
-            fs.write(buffer, 0, byteread);
-        }
-        fs.flush();
-        fs.close();
-        inStream.close();
-
-    }
 }
 class DownloadThread extends Thread{
     private String url;
     private String filepath;
 
     public DownloadThread(String url,String filepath) {
-        this.url=url;
-        this.filepath=filepath;
+        this.url=url;//切片地址
+        this.filepath=filepath;//保存路径
     }
 
     @Override

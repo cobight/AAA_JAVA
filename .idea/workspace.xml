@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="069dba53-ba7f-4a0b-8a69-d126ca01df8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/7_27/7_27.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7_27/src/beforeclass/demo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7_24/src/homework/work.java" beforeDir="false" afterPath="$PROJECT_DIR$/7_24/src/homework/work.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/D" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7_24/homework/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7_24/homework/FileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/7_24/homework/work.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/7_24/homework/work.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spider_demo/src/hrt/DownLoadFile2.java" beforeDir="false" afterPath="$PROJECT_DIR$/spider_demo/src/hrt/DownLoadFile2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +45,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="F:/INtelliJ_Idea_Space" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -65,7 +59,7 @@
       <recent name="F:\JAVA\AAA_JAVA\7_10\src\homework" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.demo1">
+  <component name="RunManager" selected="Application.DownLoadFile2">
     <configuration name="CreateFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AAA7_25.CreateFile" />
       <module name="BiLiBiLi" />
@@ -133,9 +127,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DownLoadFile2" />
         <item itemvalue="Application.demo1" />
         <item itemvalue="Application.work" />
-        <item itemvalue="Application.DownLoadFile2" />
         <item itemvalue="Application.CreateFile" />
         <item itemvalue="Application.Demo1" />
       </list>
@@ -214,6 +208,7 @@
       <workItem from="1595665661439" duration="9076000" />
       <workItem from="1595738909627" duration="28364000" />
       <workItem from="1595809409135" duration="2903000" />
+      <workItem from="1595857646905" duration="1692000" />
     </task>
     <servers />
   </component>
