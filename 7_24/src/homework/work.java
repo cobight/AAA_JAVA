@@ -7,7 +7,8 @@ import java.util.*;
 public class work {
     public static void main(String[] args) throws Exception {
 
-        wk10();
+        wk9();
+        /*第十题算法记忆*/
     }
     public static void wk1() throws IOException {
         /*在电脑D盘下创建一个文件为HelloWorld.txt文件，判断他是文件还是目录，在创建一个目录IOTest,之后将HelloWorld.txt移动到IOTest目录下去；
