@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="069dba53-ba7f-4a0b-8a69-d126ca01df8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/7_28/7_28.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7_28/src/test/Demo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_demo/src/hrt/DownLoadFile2.java" beforeDir="false" afterPath="$PROJECT_DIR$/spider_demo/src/hrt/DownLoadFile2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7_24/src/homework/work.java" beforeDir="false" afterPath="$PROJECT_DIR$/7_24/src/homework/work.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -59,7 +62,7 @@
       <recent name="F:\JAVA\AAA_JAVA\7_10\src\homework" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DownLoadFile2">
+  <component name="RunManager" selected="Application.Demo1 (1)">
     <configuration name="CreateFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AAA7_25.CreateFile" />
       <module name="BiLiBiLi" />
@@ -73,9 +76,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Demo1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Demo1" />
-      <module name="spider_demo" />
+      <module name="7_28" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="test.*" />
@@ -127,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Demo1 (1)" />
         <item itemvalue="Application.DownLoadFile2" />
         <item itemvalue="Application.demo1" />
         <item itemvalue="Application.work" />
         <item itemvalue="Application.CreateFile" />
-        <item itemvalue="Application.Demo1" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +211,11 @@
       <workItem from="1595665661439" duration="9076000" />
       <workItem from="1595738909627" duration="28364000" />
       <workItem from="1595809409135" duration="2903000" />
-      <workItem from="1595857646905" duration="1692000" />
+      <workItem from="1595857646905" duration="2289000" />
+      <workItem from="1595898897255" duration="4172000" />
+      <workItem from="1595903722012" duration="597000" />
+      <workItem from="1595921089196" duration="307000" />
+      <workItem from="1595921832866" duration="63000" />
     </task>
     <servers />
   </component>
@@ -263,22 +270,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595668662909" />
-    <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1595817316980">
+    <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1595902039050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595817316980" />
-    <state width="1877" height="240" key="GridCell.Tab.0.center" timestamp="1595817316980">
+    <state width="1877" height="240" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595902039050" />
+    <state width="1877" height="240" key="GridCell.Tab.0.center" timestamp="1595902039050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595817316980" />
-    <state width="1877" height="240" key="GridCell.Tab.0.left" timestamp="1595817316980">
+    <state width="1877" height="240" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595902039050" />
+    <state width="1877" height="240" key="GridCell.Tab.0.left" timestamp="1595902039050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595817316980" />
-    <state width="1877" height="240" key="GridCell.Tab.0.right" timestamp="1595817316980">
+    <state width="1877" height="240" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595902039050" />
+    <state width="1877" height="240" key="GridCell.Tab.0.right" timestamp="1595902039050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="240" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595817316980" />
+    <state width="1877" height="240" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595902039050" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1595493849441">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -295,10 +302,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595493849441" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1595738983782">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1595921231478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595738983782" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595921231478" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1594881387580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -315,10 +322,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="284" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595489553804" />
-    <state x="334" y="129" key="new project wizard" timestamp="1595816132648">
+    <state x="334" y="129" key="new project wizard" timestamp="1595899742418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1595816132648" />
+    <state x="334" y="129" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1595899742418" />
     <state x="661" y="147" key="refactoring.ChangeSignatureDialog" timestamp="1594295373579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

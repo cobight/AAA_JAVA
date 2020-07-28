@@ -10,29 +10,33 @@ public class work {
         wk9();
         /*第十题算法记忆*/
     }
+
     public static void wk1() throws IOException {
         /*在电脑D盘下创建一个文件为HelloWorld.txt文件，判断他是文件还是目录，在创建一个目录IOTest,之后将HelloWorld.txt移动到IOTest目录下去；
-        * 之后遍历IOTest这个目录下的文件
-        * */
+         * 之后遍历IOTest这个目录下的文件
+         * */
         File file = new File("D:\\HelloWorld.txt");
-        if (!file.exists())System.out.println(file.createNewFile()?"HelloWorld.txt文件创建成功":"HelloWorld.txt文件创建失败");
+        if (!file.exists()) System.out.println(file.createNewFile() ? "HelloWorld.txt文件创建成功" : "HelloWorld.txt文件创建失败");
         File newdirectory = new File("D:\\IOTest");
-        if (!newdirectory.exists()) System.out.println(newdirectory.mkdir()?"IOTest文件夹不存在，创建成功":"IOTest文件夹创建失败");
-        File newfile = new File(newdirectory,"HelloWorld.txt");
+        if (!newdirectory.exists()) System.out.println(newdirectory.mkdir() ? "IOTest文件夹不存在，创建成功" : "IOTest文件夹创建失败");
+        File newfile = new File(newdirectory, "HelloWorld.txt");
         boolean b = file.renameTo(newfile);
-        System.out.println(b?"HelloWorld.txt移动成功":"HelloWorld.txt移动失败");
+        System.out.println(b ? "HelloWorld.txt移动成功" : "HelloWorld.txt移动失败");
         for (File listFile : Objects.requireNonNull(newdirectory.listFiles())) {
             System.out.println(listFile.getName());
         }
     }
-    public static void wk2(){
+
+    public static void wk2() {
         /*递归实现输入任意目录，列出文件以及文件夹，效果看图*/
         FileUtil.showAllFile(new File("F:\\JAVA\\AAA_JAVA\\download"));
     }
-    public static void wk3(){
+
+    public static void wk3() {
         /*递归实现列出当前工程下所有.java文件*/
-        FileUtil.showAllFile(new File(System.getProperty("user.dir")),".java");
+        FileUtil.showAllFile(new File(System.getProperty("user.dir")), ".java");
     }
+
     public static void wk4() throws Exception {
         /*从磁盘读取一个文件到内存中，再打印到控制台*/
         String url = "F:\\JAVA\\AAA_JAVA\\6_30\\src\\cn\\demo1.java";
@@ -40,13 +44,14 @@ public class work {
         StringBuilder sb = new StringBuilder();
         int len;
         byte[] temp = new byte[1024];
-        while ((len=is.read(temp))!=-1){
-            sb.append(new String(temp,0,len));
+        while ((len = is.read(temp)) != -1) {
+            sb.append(new String(temp, 0, len));
         }
         is.close();
         System.out.println(sb.toString());
 
     }
+
     public static void wk5() throws Exception {
         /*在程序中写一个"HelloJavaWorld你好世界"输出到操作系统文件Hello.txt文件中*/
         OutputStream os = new FileOutputStream("msg.txt");
@@ -55,40 +60,43 @@ public class work {
         os.flush();
         os.close();
     }
-    public static void wk6(){
+
+    public static void wk6() {
         /*拷贝一张图片，从一个目录到另外一个目录下(PS:是拷贝是不是移动)*/
-        FileUtil.copyByBytes("test.jpg","download/test1.jpg");
+        FileUtil.copyByBytes("test.jpg", "download/test1.jpg");
     }
+
     public static void wk7() throws Exception {
         /*统计一个文件calcCharNum.txt（见附件）中字母'A'和'a'出现的总次数*/
-        try(InputStream is = new FileInputStream("calcCharNum.txt");){
-            Map<Character,Integer> map = new HashMap<>();
+        try (InputStream is = new FileInputStream("calcCharNum.txt");) {
+            Map<Character, Integer> map = new HashMap<>();
             int r;
             int count;
-            while ((r = is.read())!=-1){
-                char c = (char)r;
-                if (c=='A'){
+            while ((r = is.read()) != -1) {
+                char c = (char) r;
+                if (c == 'A') {
 //                    map.merge('A', 1, Integer::sum);
-                    map.put('A',map.get('A')==null?1:map.get('A')+1);
-                }else if (c=='a'){
+                    map.put('A', map.get('A') == null ? 1 : map.get('A') + 1);
+                } else if (c == 'a') {
 //                    map.merge('a', 1, Integer::sum);
-                    map.put('a',map.get('a')==null?1:map.get('a')+1);
+                    map.put('a', map.get('a') == null ? 1 : map.get('a') + 1);
                 }
             }
-            System.out.println("a:"+map.get('a'));
-            System.out.println("A:"+map.get('A'));
+            System.out.println("a:" + map.get('a'));
+            System.out.println("A:" + map.get('A'));
         }
 
     }
-    public static void wk8(){
+
+    public static void wk8() {
         /*统计一个文件calcCharNum.txt（见附件）中各个字母出现次数：
         A(8),B(16),C(10)...,a(12),b(10),c(3)....，括号内代表字符出现次数;*/
-        try(InputStream is = new FileInputStream("calcCharNum.txt")) {
+        try (InputStream is = new FileInputStream("calcCharNum.txt")) {
             int bytes;
-            Map<Character,Integer> map = new HashMap<>();
-            while ((bytes = is. read())!=-1){
-                char c = (char)bytes;
-                map.put(c,map.get(c)==null?1:map.get(c)+1);
+            Map<Character, Integer> map = new HashMap<>();
+            while ((bytes = is.read()) != -1) {
+                char c = (char) bytes;
+                map.put(c, map.get(c) == null ? 1 : map.get(c) + 1);
             }
             for (char c : map.keySet()) {
                 System.out.println(c + "--->" + map.get(c));
@@ -97,22 +105,23 @@ public class work {
             e.printStackTrace();
         }
     }
-    public static void wk9(){
+
+    public static void wk9() {
         /*统计一个文件calcCharNum2.txt（见附件）中各个字母出现次数：A(8),B(16),C(10)...,a(12),b(10),c(3)....中(5),国(6)，括号内代表字符出现次数;*/
-        try(InputStream is = new FileInputStream("calcCharNum.txt");ByteArrayOutputStream bos = new ByteArrayOutputStream()){
+        try (InputStream is = new FileInputStream("calcCharNum.txt"); ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
             int len;
             byte[] temp = new byte[1024];
-            while ((len=is.read(temp))!=-1){
-                bos.write(temp,0,len);
+            while ((len = is.read(temp)) != -1) {
+                bos.write(temp, 0, len);
             }
             bos.flush();
             String info = bos.toString();
-            System.out.println(info+info.length());
+            System.out.println(info + info.length());
             String[] arr = info.split("");
             System.out.println(Arrays.toString(arr));
-            Map<String,Integer> map = new HashMap<>();
+            Map<String, Integer> map = new HashMap<>();
             for (String string : arr) {
-                map.put(string,map.get(string)==null?1:map.get(string)+1);
+                map.put(string, map.get(string) == null ? 1 : map.get(string) + 1);
             }
             for (String it : map.keySet()) {
                 System.out.println(it + "(" + map.get(it) + ")");
@@ -122,6 +131,7 @@ public class work {
             e.printStackTrace();
         }
     }
+
     public static void wk10() throws Exception {
         /*使用随机文件流类RandomAccessFile将一个文本文件倒置读出*/
         String path = "msg.txt";
@@ -129,14 +139,14 @@ public class work {
         RandomAccessFile raf = new RandomAccessFile(file, "r");//"r"表示只读
         StringBuilder sb = new StringBuilder();
         long length = raf.length();
-        while(length > 0){
+        while (length > 0) {
             length--;
             //设置在那个位置发生下一个读取或写入操作
             raf.seek(length);
             int len1 = (char) raf.readByte();
-            if(len1 <= 128){
+            if (len1 <= 128) {
                 sb.append((char) len1);
-            }else{
+            } else {
                 length--;
                 raf.seek(--length);
                 byte[] bytes = new byte[3];
@@ -148,30 +158,33 @@ public class work {
         System.out.println(sb.toString());
         raf.close();
     }
+
     public static void wk11() throws IOException {
         /*编写一个Java应用程序，可以实现Dos中的type命令，并加上行号。
         即将文本文件在控制台上显示出来，并在每一行的前面加上行号。*/
-        try(InputStream is = System.in;
-            OutputStream os= System.out;
-            Reader reader = new InputStreamReader(is);
-            BufferedReader br = new BufferedReader(reader);
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os));
-        ){
+        try (InputStream is = System.in;
+             OutputStream os = System.out;
+             Reader reader = new InputStreamReader(is);
+             BufferedReader br = new BufferedReader(reader);
+             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os));
+        ) {
+            int len = 0;
             String line;
-            while ((line=br.readLine())!=null){
-                bw.write(line);
+            while ((line = br.readLine()) != null) {
+                bw.write(++len + "\t-->\t" + line);
                 bw.newLine();
                 bw.flush();
             }
         }
 
 
+    }
 
-    }
-    public static void wk12(){
+    public static void wk12() {
         /*输入两个文件夹名称，将A文件夹内容全部拷贝到B文件夹，要求使用多线程来操作。*/
-        FileUtil.ThreadCopyFile(new File("F:\\JAVA\\AAA_JAVA\\download",""),new File("F:\\JAVA\\AAA_JAVA\\download1",""));
+        FileUtil.ThreadCopyFile(new File("F:\\JAVA\\AAA_JAVA\\download", ""), new File("F:\\JAVA\\AAA_JAVA\\download1", ""));
     }
+
     public static void wk13() throws Exception {
         /*查看D盘中所有的文件和文件夹名称，并且使用名称升序降序，文件夹在前和文件夹在后，文件大小排序等。 */
         File d = new File("D:\\YoudaoNote\\YoudaoNote");
@@ -202,6 +215,7 @@ public class work {
 
     }
 }
+
 class FileUtil {
     public static void showAllFile(File src) {
         if (src.exists()) {
