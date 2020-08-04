@@ -27,7 +27,15 @@ public class DownLoadFile {
             ArrayList<String> list = pages.getImgUrlList(path1);
 
             for (int j = 0; j < list.size(); j++) {
-                ImgControl.downloadImgByNet(list.get(j),path+"\\spider_demo\\download\\"+path1.substring(path1.lastIndexOf("/")+1,path1.lastIndexOf(".")),ImgControl.getFileName(list.get(j)));
+                int f=j;
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ImgControl.downloadImgByNet(list.get(f),
+                                path+"\\download\\"+path1.substring(path1.lastIndexOf("/")+1,path1.lastIndexOf(".")),ImgControl.getFileName(list.get(f)));
+                    }
+                }).start();
+
             }
         }
 
